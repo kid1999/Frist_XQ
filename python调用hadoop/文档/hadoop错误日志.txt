@@ -1,0 +1,15 @@
+错误指南
+
+    1.如果出现javahome问题      
+        >>> 配置javahome路径 vim hadoop-env.sh
+                 /usr/java/default
+
+    2.出现 -bash  hadoop  。。。not found 问题
+        >>> 配置 vim /etc/profile
+            增加： export HADOOP_HOME=  hadoop的安装地址
+                   export PATH=$PATH:$HADOOP_HOME/bin
+
+    3.修改完配置信息以后记得 source  /。。。
+
+    4.多次格式化hdfs会导致 namenode与datanode的id不合  >> master启动不了datanode
+     进入hadoop的logs 下查看日志   >>  修改Version的 natanode 和 namenode 的clusterID一致

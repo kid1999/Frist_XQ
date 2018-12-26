@@ -1,0 +1,104 @@
+﻿Hadoop集群搭建手册
+
+1.准备材料
+2.将Linux连接到客户端（本机）
+    修改网关： 本机为192.168.2.1  其他为101/102/103.。。。
+
+    在虚拟机中选择host-only网络
+
+    vim /sysconfig/network
+    >>>NETWORKING=yes
+    >>>GATWAY=192.168.2.1 (本机ip)
+    
+    修改ip
+    vim /etc/sysconfig/network-sripts/ifcfg-enp0s3  (linux网卡名字)
+    >>>TYPE=Ethernet
+    >>>IPADDR=192.168.20  (给linux分配的ip)
+    >>>NETMASK=255.255.255.0
+
+    修改主机名 ；
+    hostnamectl set-hostname  ....
+    
+    重启网络：
+    service network restart
+
+    测试是否修改成功：（注意关掉防火墙)
+    ifconfig
+    ping 客户端ip
+
+3.安装好一台linux：
+    装好xshell 利用ssh访问linux
+    装好xftp  将本地下载的 Hadoop jdk 上传 linux
+
+    安装 jdk：
+    rpm -ivh 。。。rpm   （默认安装在/usr/jaca）
+    用 java命令检查
+
+    安装 Hadoop：
+    tar -xvf 。。。tar。gz
+
+4.将这样一台搭好的linux 复制几份
+
+    全部关掉防火墙
+    systemctl stop firewalld
+    systemctl disable firewalld
+
+    互相ping测试是否联通
+
+    分别进行 修改ip/ 修改主机名 / 重启网络 的操作
+
+    同时配置：
+    cd /usr/local/hadoop/etc/hadoop
+
+    中心节点配置：
+    vim core-site.xml
+    >>>添加
+    <configuration>
+        <property>
+            <name>fs.defaultFS</name>
+            <value>hdfs://master:9000</value>
+        </property>
+    </configuration>
+
+
+5.启动hdfs
+
+    首先格式化hdfs   hdfs namenode -format
+
+    将ip与名字对应
+    vim /etc/hosts
+    >>>  192.168.2.20  master
+        ....
+        ....
+        ....
+
+    master启动 namenode：
+    hadoop-daemon.sh start namenode
+
+    jps  检查namenode是否启动
+
+    slave启动 datanode：
+    hadoop-daemon.sh start datanode
+
+    jps检查
+
+错误指南
+
+    1.如果出现javahome问题      
+        >>> 配置javahome路径 vim hadoop-env.sh
+                 /usr/java/default
+
+    2.出现 -bash  hadoop  。。。not found 问题
+        >>> 配置 vim /etc/profile
+            增加： export HADOOP_HOME=  hadoop的安装地址
+                   export PATH=$PATH:$HADOOP_HOME/bin
+
+    3.修改完配置信息以后记得 source  /。。。
+
+    4.多次格式化hdfs会导致 namenode与datanode的id不合  >> master启动不了datanode
+     进入hadoop的logs 下查看日志   >>  修改Version的 natanode 和 namenode 的clusterID一致
+
+
+
+
+

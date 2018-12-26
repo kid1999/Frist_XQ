@@ -1,0 +1,24 @@
+1. hdfs dfsadmin -report 返回hadoop集群的信息
+
+2.netstat -ntlp  返回可访问的端口
+
+3.hadoop的网页访问  masterip + ：端口
+
+4.关闭节点
+hadoop-daemon.sh stop namenode/datanode  
+
+5.hadoop/etc/hadoop 下的slaves管理者datanode
+    vim slaves
+    >>填入所有 datanode名字（S1）
+
+6.利用master管理所有子节点
+start-dfs.sh 启动所有节点
+stop-dfs.sh  关闭所有节点
+
+
+7.免密登陆
+  cd /.ssh
+  ssh-keygen -t rsa         一路回车 生成两个文件 一个root的私钥 ，一个公钥，
+  ssh-copy-id S1（子节点）   将公钥给子节点，以后就不用给密码了
+
+

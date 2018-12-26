@@ -1,0 +1,48 @@
+分布式计算
+设计原则：   移动计算，而不是移动移动数据
+
+yarn             资源调度引擎      >>调度cpu与内存资源
+
+mapreduce  计算引擎             >>一张计算模型 ，类似的还有spark
+
+
+                配置文件
+
+1.yarn-site.xml的配置  （此时配置在master这台机器上）
+<property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>master</value>
+</property>
+<property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+</property>
+<property>
+        <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandle</value>
+</property>
+
+   》》》然后就可以  运行 strat-yarn.sh  启动
+
+  	>>> 类似于hdfs  当运行start时 自动搜索 slaves 文件里的子节点   一一打开
+
+
+2.mapred-site.xml的配置
+             为mapreduce 指定运行的框架：
+<property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+</property>
+
+
+
+3.测试wordcount例子
+
+hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/。。。/。。。。excp。。jar  wordcount           /输入    /输出
+ 
+
+
+
+
+
+

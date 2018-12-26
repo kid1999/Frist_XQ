@@ -1,0 +1,34 @@
+<h1>
+    统计结果为: {{ count }}  字
+</h1>
+<br>
+<a href="..">回到主页</a>
+<br>
+<a>
+    {{ text }}
+</a>
+<br>
+<h2>
+    字符频率:
+</h2>
+    {{ count_word }}
+<br>
+<br>
+<h2>
+    排序后:
+</h2>
+    {{ sort }}
+<br>
+<br>
+<br>
+<br>
+<!--使用html引入python代码-->
+
+
+<h2>
+    修改后:
+</h2>
+{% for word,count in sort %}
+{{word}} - {{count}}
+<br>
+{%endfor%}
