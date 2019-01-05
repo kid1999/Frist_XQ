@@ -10,7 +10,7 @@ d = {'Content-Type':'application/json','charset':'UTF-8'}
 r = requests.post(url,data=d)
 requests_json = r.json()                          #requests 内置的josn解析器 转化为dict
 access_token = requests_json['access_token']
-# print(access_token)                      #得到access_token
+print(access_token)                      #得到access_token
 
 
 
@@ -26,7 +26,7 @@ def get_photo_base(photo_url):
 #上传对比
 dict = {}
 request_url = "https://aip.baidubce.com/rest/2.0/face/v3/detect"
-base1 = get_photo_base(r'C:\Users\Administrator\Desktop\百度人脸识别api\4.jpg')  #上传图片
+base1 = get_photo_base(r'E:\Git\history--code\百度人脸识别api\4.jpg')  #上传图片
 
 params = "{\"image\":\""+base1+"\",\"image_type\":\"BASE64\",\"face_field\":\"faceshape,facetype,age,beauty,gender,glasses,race,facetype,\",\"max_face_num\":\"10\"}" #传入参数
 request_url = request_url + "?access_token=" + access_token

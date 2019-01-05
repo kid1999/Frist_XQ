@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^search-form$',search.search_from),
     url(r'^search$',search.search),
     url(r'^search-post$',search2.search_post),
+    url(r'^$',view.index),
 ]

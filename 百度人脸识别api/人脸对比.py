@@ -25,8 +25,8 @@ def get_photo_base(photo_url):
 
 #上传对比
 request_url = "https://aip.baidubce.com/rest/2.0/face/v3/match"
-base1 = get_photo_base(r'C:\Users\Administrator\Desktop\百度人脸识别api\9.jpg')
-base2 = get_photo_base(r'C:\Users\Administrator\Desktop\百度人脸识别api\10.jpg')
+base1 = get_photo_base(r'E:\Git\history--code\百度人脸识别api\2.jpg')
+base2 = get_photo_base(r'E:\Git\history--code\百度人脸识别api\3.jpg')
 
 params = json.dumps(
     [{"image": base1, "image_type": "BASE64", "face_type": "LIVE", "quality_control": "LOW"},

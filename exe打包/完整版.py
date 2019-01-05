@@ -26,10 +26,11 @@ def get_result(photo_url):
     base1 = get_photo_base(photo_url)  #上传图片
 
     params = "{\"image\":\""+base1+"\",\"image_type\":\"BASE64\",\"face_field\":\"faceshape,facetype,age,beauty,gender,glasses,race,facetype\",\"max_face_num\":\"10\"}" #传入参数
-    access_token = '24.ff8a9e09dcf23bfc3be3c6773b77196c.2592000.1542379536.282335-11554113'
+    access_token = '24.7490a677db27df25e6be507b3259008e.2592000.1549007522.282335-11554113'
     request_url = request_url + "?access_token=" + access_token
     res = requests.post(url=request_url, data=params)
     result = res.json()
+    # print(result)
     for n in range(result['result']['face_num']):
         dict['face_num'].append(result['result']['face_num'])                           #人脸数目
         dict['face_token'].append(result['result']['face_list'][n]['face_token'])     #人脸图片的唯一标识
