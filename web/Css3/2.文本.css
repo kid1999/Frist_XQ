@@ -1,0 +1,27 @@
+
+h1{
+    text-indent: -2em;
+    padding-left: 2em;
+}
+p{
+    padding-left: 2em;
+    color: brown;
+    /*text-align: center;*/
+}
+a{
+    text-shadow: 5px 1px #FFF000; /* 阴影偏移量 颜色*/
+    width: 100px;
+    flex-wrap: normal;  /*自动换行*/
+}
+
+#p1{
+    text-transform: capitalize;
+}
+
+#p2{
+    text-transform: lowercase;
+}
+
+#p3{
+    text-transform: uppercase;
+}

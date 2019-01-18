@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>定位</title>
+    <style type="text/css">
+        #position1{
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            position: fixed;
+            left: 20px;
+            top: 20px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div id="position1">
+    </div>
+    <script>
+        for (var i = 0; i < 100; i++) {
+            document.write(i+"<br>");
+        }
+    </script>
 </body>
 </html>

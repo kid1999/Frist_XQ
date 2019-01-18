@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            -webkit-transition: width 2s , height 2s , -webkit-transform 2s;
+            transition: width 2s,height 2s ,transform 2s;
+        }
+        div:hover{
+            width: 200px;
+            height: 200px;
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div>效果展示</div>
 </body>
 </html>

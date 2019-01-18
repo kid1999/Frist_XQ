@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>css表格</title>
+    <style type="text/css">
+        #tb,tr,td{
+            border: 1px solid blue; /* 外边框*/
+            text-align: center;
+            background-color: azure;
+        }
+        #tb{
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <table id="tb">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr class="alt">
+            <td>小乌</td>
+            <td>20</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>小乌</td>
+            <td>20</td>
+            <td>男</td>
+        </tr>
+        <tr class="alt">
+            <td>小乌</td>
+            <td>20</td>
+            <td>男</td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -4,7 +4,7 @@ from ftplib import FTP
 import re
 
 #本次作业文件夹
-path = 'e:\\test\\'
+path = 'd:\\test\\'
 
 # 主页 
 def index(request):
@@ -32,7 +32,8 @@ def upload(request):
         return HttpResponse("error")
 
 
-
+def search(request):
+    return render(request,'index.html')
 
 
 

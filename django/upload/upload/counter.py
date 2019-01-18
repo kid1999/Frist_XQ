@@ -7,12 +7,14 @@ from pyecharts import Line3D,Gauge
 
 
 REMOTE_HOST = "https://pyecharts.github.io/assets/js"
-path = 'e:\\test\\'
+path = 'd:\\test\\'
 log_path = 'C:\\log\\'
 
 def count(request):
 #     write_txt()     # 写入日志
     people = dispaly_people()  # 展示
+    if not people:
+        return HttpResponse("无上交记录!")
     template = loader.get_template('count.html')
     l3d = display()
     context = dict(

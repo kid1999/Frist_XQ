@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>盒子模型</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .container{
+            margin: 100px;      /*外边距*/
+        }
+        .bd{
+            border-style: groove;   /*边框*/
+        }
+        .pd{
+            padding: 10px;      /*内边距*/
+        }
+        .content{
+            background-color: darkgray;     /*内容*/
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="container">
+        <div class="bd">
+            <div class="pd">
+                <div class="content">hello</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

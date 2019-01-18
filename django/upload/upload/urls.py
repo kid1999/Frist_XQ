@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.index),
     path('ok/', views.upload),
     path('count/', counter.count),
+    path('search',views.search),
 ]
