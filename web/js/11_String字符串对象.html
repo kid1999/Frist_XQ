@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>String对象</title>
 </head>
 <body>
-$END$
+    <script>
+        var str = "hello world";
+        document.write("字符串长度: " + str.length);     //字符串长度
+        document.write("查找 world: " + str.indexOf("world"));
+        document.write("匹配字符串: " + str.match("world"));
+        document.write("替换字符: " +str.replace("world","javaScript") )
+        document.write("大写转换: " + str.toLocaleUpperCase());
+        document.write("小写转换: " + str.toLocaleLowerCase());
+
+        var str1 = "hello,world,yes,ok";
+        var s = str1.split(",");
+        document.write("字符串的切割:" + s[2]);
+
+    </script>
 </body>
 </html>

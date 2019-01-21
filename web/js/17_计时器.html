@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计时器任务</title>
+</head>
+<body>
+    <p id="ptime"></p>
+    <button onclick="stopTime()">停止</button>
+    <script>
+        var mytime = setInterval(function(){        //定时任务
+            getTime();
+        },1000);
+
+        function getTime(){
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("ptime").innerHTML = t;
+        }
+        //结束任务
+        function stopTime(){
+            clearInterval(mytime);
+        }
+
+        //延时任务
+        var win;
+        function mywin(){
+            alert("hello");
+            win = setTimeout(function(){
+                mywin()
+            },3000)         //延时3000ms循环运行
+        }
+        mywin();
+        function stopWin(){     //停止任务
+            clearInterval(win);
+        }
+    </script>
+</body>
+</html>

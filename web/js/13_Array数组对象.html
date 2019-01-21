@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array数组</title>
+</head>
+<body>
+    <script>
+    //合并
+        // var a=["hello","world"];
+        // var b=["hell","xy"];   
+        // var c = a.concat(b);
+    
+    //升序
+        var l= [1,6,5,2];
+        document.write(l.sort());
+    
+    //倒序
+        var ls= [1,6,5,2];
+        document.write(ls.sort(function(a,b){
+            return b-a;
+        }));   
+
+    //追加元素
+        var d = ["a","b"];
+            d.push("c");
+        document.write(d);
+    
+    //翻转
+        var e = ["c","b","a"];
+        document.write(e.reverse());
+    </script>
+</body>
+</html>

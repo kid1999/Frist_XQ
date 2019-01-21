@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS操作html</title>
+</head>
+<body>
+    <p id="pid">Hello</p>
+    <button onclick="demo()">按下去</button>
+    <script>
+        function demo(){
+            // 通过id获取html内容 并修改
+            var nv=document.getElementById("pid").innerHTML = "Ws";
+            nv.innerHTML="World";
+
+            // 通过标签名获取html内容 修改
+            document.getElementsByTagName("p");  //当前元素第一个
+
+        }
+    </script>
+    <a href="https://www.baidu.com" id="aid" target="blank">baidu</a>
+    <button onclick="demo1()">转换链接</button>
+    <script>
+        function demo1(){
+            document.getElementById("aid").href="https://kid1999.github.io"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>location对象</title>
+</head>
+<body>
+    <button id="btn" onclick="getLoc()">按键</button>
+    <p id="pid1"></p>
+    <p id="pid2"></p>
+    <p id="pid3"></p>
+    <p id="pid4"></p>
+    <p id="pid5"></p>
+    <p id="pid6"></p>
+<script>
+    function getLoc(){
+        // document.getElementById("pid1").innerHTML = window.location.hostname + "<br>";// 主机域名
+        // document.getElementById("pid2").innerHTML = window.location.pathname+ "<br>";//当前页面路径
+        // document.getElementById("pid3").innerHTML = window.location.port+ "<br>";   //主机端口
+        // document.getElementById("pid4").innerHTML = window.location.protocol+ "<br>";//web 协议
+        document.getElementById("pid5").innerHTML = window.location.href+ "<br>";//URL
+        // document.getElementById("pid6").innerHTML = window.location.assign()+ "<br>";//新的文档
+
+    }
+</script>
+</body>
+</html>

@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>js事件对象</title>
 </head>
 <body>
-$END$
+    <div id="div">
+        <button id="btn">按一下</button>
+        <a target="_blank" href="https://www.baidu.com" id="aid">baidu</a>
+        <script>
+            document.getElementById("btn").addEventListener("click",demo);
+            document.getElementById("div").addEventListener("click",demo01);
+            document.getElementById("aid").addEventListener(("click",showA));
+            function demo(event) {
+                // alert(event.type);   //事件类型
+                alert(event.target);    //事件对象
+
+                //阻止事件冒泡
+                event.stopPropagation();
+            }
+
+            function demo01(event) {
+                // alert(event.type);
+                alert("父节点 接收到事件冒泡");
+            }
+
+            function showA(event) {
+                event.stopPropagation();    //阻止冒泡
+                event.preventDefault();     //阻止预设事件
+            }
+        </script>
+    </div>
 </body>
 </html>

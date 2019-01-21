@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS事件</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            float: right;
+        }
+    </style>
+</head>
+<!-- 网页重新加载事件 -->
+<body onload="msg()">
+    <!-- 鼠标经过事件 -->
+    <div  onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+    <script>
+        function onOver(ooj){
+            ooj.innerHTML = "HEllo";
+        }
+        function onOut(ooj){
+            ooj.innerHTML = "World";
+        }
+    </script>
+    <!-- 文本内容改变事件 -->
+    <form >
+        <input type="text" onchange="alert('Hello, 内容改变了!')">
+    </form>
+    <!-- 文本框选中事件   鼠标选中事件 -->
+    <form>
+        <input type="text" onselect="changeDemo(this)" onfocus="changeDemo01(this)">
+    </form>
+    <script>
+        function changeDemo(bg){
+            bg.style.background="red";
+        }
+        function changeDemo01(bg){
+            bg.style.background="blue";
+        }
+        function msg(){
+            alert("网页加载完毕!");
+        }
+    </script>
+
+</body>
+</html>

@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>对象</title>
 </head>
 <body>
-$END$
+    <script>
+        <!-- 创建对象 -->
+        // people = new Object();
+        // people.name = 'hell';
+        // people.age = 20;
+        // document.write("name: " + people.name + " age:" + people.age);
+
+
+        // people = {name:"hell",age:20};
+        // document.write("name: " + people.name + " age:" + people.age);
+
+
+        function  people(name,age) {
+            this._name = name;
+            this._age = age;
+        }
+        son = new people("hell",20);
+        document.write("name:" + son._name + " age:" + son._age);
+    </script>
 </body>
 </html>

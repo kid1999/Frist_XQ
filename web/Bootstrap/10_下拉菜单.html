@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉菜单</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 定义一个下拉菜单 -->
+        <div class="dropdown pull-right">       <!--右对齐-->
+            <button class="btn btn-default dorpdown-toggle" type="button" data-toggle="dropdown">
+                下拉菜单
+                <span class="caret"></span>  <!--下拉箭头-->
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                <li role="presentation" class="dropdown-header">一到四：</li>           <!--分类下拉菜单-->
+                <li><a href="#" role="menuitem">一</a></li>
+                <li><a href="#" role="menuitem">二</a></li>
+                <li><a href="#" role="menuitem">三</a></li>
+                <li><a href="#" role="menuitem">四</a></li>
+                <li role="presentation" class="dropdown-header">1到4：</li>
+                <li><a href="#" role="menuitem">1</a></li>
+                <li><a href="#" role="menuitem">2</a></li>
+                <li><a href="#" role="menuitem">3</a></li>
+                <li><a href="#" role="menuitem">4</a></li>
+                <li role="presentation" class="divider"></li>       <!--分割线-->
+                <li><a href="#" role="menuitem">1</a></li>
+                <li><a href="#" role="menuitem">2</a></li>
+                <li class="disabled"><a href="#" role="menuitem">3</a></li>     <!--不可用的选项-->
+                <li><a href="#" role="menuitem">4</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+</html>
