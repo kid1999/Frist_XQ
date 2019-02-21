@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Collapse插件</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <a class="btn btn-primary" data-toggle="collapse" href="#mycontent">
+            按下 显示内容
+        </a>
+        <div class="collapse" id="mycontent">
+            <div class="well">
+                Hello
+            </div>
+        </div>
+
+        <!-- 手风琴效果 -->
+        <div class="panel-group" id="accordion" role="tablist">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading">
+                    <h4 class="panel-title">
+                        <!--   子节点                                              父节点 -->
+                        <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">item1</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
+                    <div class="panel-body">
+                        hello world.
+                        hello world.
+                        hello world.
+                        hello world.
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading">
+                        <h4 class="panel-title">
+                            <!--   子节点                                              父节点 -->
+                            <a href="#collapse2" data-toggle="collapse" data-parent="#accordion">item2</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse in" role="tabpanel">
+                        <div class="panel-body">
+                            hello world.
+                            hello world.
+                            hello world.
+                            hello world.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading">
+                            <h4 class="panel-title">
+                                <!--   子节点                                              父节点 -->
+                                <a href="#collapse3" data-toggle="collapse" data-parent="#accordion">item3</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse in" role="tabpanel">
+                            <div class="panel-body">
+                                hello world.
+                                hello world.
+                                hello world.
+                                hello world.
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        // 隐藏事件
+        $("#accordion").on('hidden.bs.collapse',function () { 
+            alert("hello.")
+         })
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" data-loading-text="Loading for 3 seconds" class="btn btn-primary js-loading-btn">
+            Loading Statue
+        </button>
+                                                                                <!-- 按钮效果 -->
+        <button type="button" class="btn btn-default" data-toggle="button" autocomplete="off">
+            hello
+        </button>
+        <!-- 按钮组  多选-->
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="checkbox" autocomplete="off">
+                选择1
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off">
+                选择2
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off">
+                选择3
+            </label>
+        </div>
+
+        <!-- 按钮组  单选-->
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="radio" autocomplete="off">
+                选择1
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" autocomplete="off">
+                选择2
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" autocomplete="off">
+                选择3
+            </label>
+        </div>
+
+        <!-- 按键事件 -->
+        <button type="button" id="myid" data-complate-text="finish" class="btn btn-danger" autocomplete="off">hello</button>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $(".js-loading-btn").on("click",function (e) { 
+            var btn = $(this).button("loading");
+            setTimeout(function (e) { 
+                btn.button("reset")
+             },3000)
+         })
+         $("#myid").on("click",function (e) { 
+             $(this).button("complate");
+          })
+    </script>
+</body>
+</html>

@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "port": 9222,
+            "name": "Launch Chrome",
+            "sourceMaps": true,
+            "url": "http://localhost:8080/bin/index.html",
+            "webRoot": "${workspaceFolder}"
+
+        },
+        {
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
             "request": "launch",

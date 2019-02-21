@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>警告框</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-info fade in" id="myid">
+            <button class="close" type="button" data-dismiss="alert">&times;</button>
+            <strong>HelloWorld</strong>欢迎你的到来
+        </div>
+
+        <div class="alert alert-info fade in" id="myid1">
+                <button class="close" type="button" data-dismiss="alert">&times;</button>
+                <strong>HelloWorld</strong>欢迎你的到来
+                <button type="button" class="btn btn-primary">按键</button>
+            </div>
+
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        //关闭事件
+        $("#myid").alert("close");
+        //事件
+        $("#myid1").on("close.bs.alert",function (e) { 
+            console.log("触发了");
+         })
+    </script>
+</body>
+</html>

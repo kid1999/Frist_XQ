@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}默认标题{% endblock %} - 来自base文件</title>
+</head>
+<body>
+    {% comment %} {% include 'nav.html' %} {% endcomment %}
+    {% block content %}
+    <div>这里是默认内容,所有继承自这个模板的,如果不覆盖就显示这里的默认内容。</div>
+    {% endblock %}
+
+        {% include 'learn/bottom.html' %}
+        {% comment %} {% include 'tongji.html' %}  {% endcomment %}
+</body>
+</html>

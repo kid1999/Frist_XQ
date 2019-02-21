@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框组</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--输入框前添加-->
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="UserName">
+        </div>
+        <!--输入框后添加-->
+        <div class="input-group">
+            <input class="form-control" type="text">
+            <span class="input-group-addon">$</span>
+        </div>
+        <!--输入框前后添加-->
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="text">
+            <span class="input-group-addon">.00</span>
+        </div>
+        <!--输入框大小控制-->
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="text">
+            <span class="input-group-addon">.00</span>
+        </div>
+        <!--多选/单选框/按钮-->
+        <div class="row">
+            <div class="col-lg-6">      <!--占屏幕一半-->
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox">         <!--多选/单选框-->
+                    </span>
+                    <input class="form-control" type="text">   <!--输入框-->
+                </div>
+            </div>
+        </div>
+        <!--按钮-->
+        <div class="row">
+            <div class="col-lg-6">      <!--占屏幕一半-->
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-info">GO</button>  <!--改为按钮-->
+                    </span>
+                    <input class="form-control" type="text">   <!--输入框-->
+                </div>
+            </div>
+        </div>
+        <!--下拉菜单配输入框-->
+        <div class="row">
+            <div class="col-lg-6">      <!--占屏幕一半-->
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Action
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">hello</a></li>
+                            <li><a href="#">hello</a></li>
+                            <li><a href="#">hello</a></li>
+                            <li><a href="#">hello</a></li>
+                        </ul>
+                    </div>
+                    <input class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模态框3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+    <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#my_modal">
+        点我打开
+    </button>
+
+
+    <div class="modal fade bs-example-modal-sm" id="my_modal" role="dialog" aria-label="my_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>hello</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">
+                        close
+                    </button>
+                    <button class="btn btn-primary" type="button">
+                        保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $("#my_modal").modal("show")
+    </script>
+</body>
+</html>

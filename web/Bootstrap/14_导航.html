@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航的建立</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+                            <!--修改选择效果 两端对齐-->
+        <ul id="mytab" class="nav nav-pills nav-justified" role="tablist">
+            <li data-toggle="tab" role="presentation" class="active"><a href="#">home</a></li>
+            <li data-toggle="tab" role="presentation" class="disabled"><a href="#">hello</a></li>   <!--禁止点击-->
+            <!--下拉菜单-->
+            <li data-toggle="tab" role="presentation" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                world
+                <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello1</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello2</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello3</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<!--自建函数-->
+<script>
+    $("#mytab a").click(function (e) {
+        e.preventDefault();
+        $(this).tab("show");
+    })
+</script>
+</body>
+</html>
